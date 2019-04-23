@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ReasonML, and Why</title>
     <style>  
+      :root {
+        --black: #292626;
+        --white: #white;
+      }
       @font-face {
           font-family: 'futurabook';
           src: url(https://s3-us-west-2.amazonaws.com/studio-mcgee-assets/typography/Futura-Boo.eot);
@@ -19,17 +23,28 @@
           }
       body {
         font-family: 'futurabook';
+        background-color: var(--white);
+      }
+      h1, h2, h3 {
+        color: var(--black);
       }
     </style>
 </head>
 <body>
   <textarea id="source">
+
     class: center, middle
     <h1>ReasonML</h1>
     <h3>My Experience Using It in Production</h3>
-    <img src="camel.png" alt="caml" width="175px">
-    <img src="https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png" width="175px" alt="">
+    <img src="./assets/camel.png" alt="caml" width="175px">
+    <img src="./assets/react-logo.png" width="175px" alt="">
     <h3>by Ben Schinn</h3>
+
+    ---
+
+    <h1 class="center">Origin Story</h1>
+    * To understand ReasonML's origin, it's important to understand React's origin
+    * Back in 2010, React was prototyped in Standard ML
   </textarea>
   <script src="https://remarkjs.com/downloads/remark-latest.min.js">
   </script>
