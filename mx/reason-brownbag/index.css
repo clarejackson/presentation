@@ -1,0 +1,38 @@
+:root {
+    --black: #292626;
+    --white: #white;
+  }
+  body {
+    font-family: serif;
+    background-color: var(--white);
+    background: #f3f3f1 !important;
+  }
+  h1, h2, h3 {
+    color: var(--black);
+  }
+  p, li {
+    font-size: 2rem;
+  }
+  .text-lg {
+    font-size: 4rem;
+  }
+  .flex-center {
+    display: flex;
+    justify-content: center;
+  }
+  .col-center {
+    align-items: center;
+    flex-direction: column;
+  }
+  .box {
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+  }
+  .box-cell {
+    height: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }

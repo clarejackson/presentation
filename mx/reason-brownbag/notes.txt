@@ -1,0 +1,100 @@
+slide 1 title
+
+slide 2
+I’m not here to bash on javascript and tell you how much reasonml is better. I love Javascript. And I think the products that we have built here at MX speak volume to how great Javascript is. I do think there are benefits that we can consider at MX from adopting a new language like ReasonML, and that’s what my presentation is really about today. 
+
+slide 3
+so what is reasonml? how can it enhance developer experience and user experience?
+
+slide 4
+to understand reasonml, we need some context. story time!
+
+slide 5
+ML or Metalanguage is language developed in the 70s by Robin Milner. This language draws inspiration from the mathematical formalism lambda calculus and languages like Lisp. ML has inspired numerous other languages like Rust, Haskell, and Elm. The most prominent flavor/dialect of ML is OCaml, and second probably StandardML. ML historically has been used in academia (relating to compilers, analyzers, theorem provers).
+
+slide 6
+So what? what does this language  primarily used in academia have to do with anything? 
+REACT! That UI library that we pervasively use at MX.
+
+slide 7
+React was open sourced in 2013
+
+slide 8
+But a few years back around 2010, Jordan Walke, the author of React prototyped it in StandardML. Concepts like  PropTypes or immutability in react maybe feel a bit foreign in javascript. But much of fundamental react philosophy was inspired from ML.
+
+A few years after react was open sourced and was widely adopted by the JavaScript community, Jordan was working on unsolved issues in React (e.g. concurrency), he started modeling these problems in OCaml. By then OCaml had emerged as the more established ML language over StandardML. Throughout his research he would share his work for feedback with his colleagues at facebook and would often receive blank looks at the code. He realized for many people the idiosyncrasies of OCaml syntax was
+foreign/alien to many people (syntax is subjective). He had the idea, what if, ML syntax can be more like "friendly" kinda like javascript, but still leverage the semantics of ML? 
+
+slide 9
+Thus ReasonML was born! 
+
+slide 10
+ReasonML is technically not a new language. It's a new syntax and toolchain on top of battletested and hardened language that has been around for 20 years; OCaml.
+
+Here is the architecture of ReasonML/OCaml.
+
+This means that in a project, you can interchangeably use ocaml and reasonml in modules. both will be parsed by the OCaml AST and output to targeted platform whether that be web or native. 
+
+Bucklescript is an ocaml to javascript compiler authored by Hongbo Zhang from Bloomberg. Notable things about Bucklescript is that it's build time is very fast and outputs performant and reasonably readable javascript. 
+
+slide 11
+Reason offers immutable language level data structures like: records, lists, and tuples. Mutation is possible, but the grammar of the language is such that you must go out of your way to make something mutable. JavaScript is the opposite. You need to go out of your way to insure that you have immutability in js. Reasonml is immutable by default. This helps avoid bugs, unintended mutations, and poor patterns.
+
+I will not be diving into details of these data structures today, but explore them in future brownbags.
+
+slide 12
+here's a `location null` from okta. this is bad UX. 
+
+slide 13
+option type, often also referred to as maybe times in other languages, can resolve to only two things. either nothing or something. You can achieve the same thing in js with null checkers, but wrapping something as an option type forces the developer to deal with the possibly of a null or undefined value. It's nice that the language can guides you to handle invalid values. 
+
+slide 14
+each of types vs one of types
+
+slide 15
+one of type example
+
+slide16
+Here is an example of one of type in ML known as variants. Often in functional programming this is also called ADT. this data type allows us to to express "one of" types. type suit could be club, diamond, heart, or spade. type rank could be of type Jack, queen, ace, or num. Many languages have support for this sort of enumerations including Java, C, but ML takes the next step of letting variants carry data; as you can see in variant Num. 
+
+Club, Diamond,... aren't string or some reference to some constant. Theyre called constructor or tags. It sort of custom datatype that you can define. The pipe separates each constructor. 
+
+slide 17
+I also want to briefly introduce pattern matching. what you see may be familiar to switch statement in Javascript, but it is much more. like switch, it is a case expression, but ML compiler helps us cover all cases. 
+
+slide18
+if we forget to cover some cases the compiler can give a helpful non-exhaustive warning. If you also cover a case accidentally more than once it will also warn you. When you are pattern matching against pairs and different combinations, it can be easy to forget a case or have unused cases because they are duplicates. 
+
+  slide 19
+  ADT are really shine when you try and express something like remoteData and different possible cases. variants and pattern matching can help us make invalid states unrepresentable and code for exhaustiveness. 
+
+
+  escape hatches
+  raw javascript, shady externals
+
+  downside:
+  writing FFI, depending on the API and how flexible the I/O is, it can be very boilerplatey and there's room for human error when manual binding to 3rd party libs (there's automation tho ;))
+
+  Reason can be gradually adopted 2 adoption strategies:
+  state management first
+  UI logic first
+
+  POC for biz logic adoption in ashitaka
+
+  my experience and personal impact of reasonml
+
+  reasonml cool projects: gentype, fastpack, npm version manager (fnm)
+
+  what could we build? 
+
+  takeaways: how could reasonml impact other engineers at MX and the organization? reasonml is in a sweetspot, where it's mature enough to be used in production, but the community is still small and there's a lot of opportunity to contribute. 
+
+  adopting a new language should not be taken lightly. there's a cost. it's only worth it if the return is much greater than investment. 
+
+  isaiah's proj uses typescript. we could use something liek gentype to output types for ts but write it in reason. 
+
+  call for champions.
+
+
+
+
