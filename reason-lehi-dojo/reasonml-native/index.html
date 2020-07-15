@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Reason Lehi Dojo</title>
+	<style>  
+		:root {
+				--black: #292626;
+				--white: #white;
+		}
+		@font-face {
+				font-family: 'futurabook';
+				src: url(https://s3-us-west-2.amazonaws.com/studio-mcgee-assets/typography/Futura-Boo.eot);
+				src: url(https://s3-us-west-2.amazonaws.com/studio-mcgee-assets/typography/Futura-Boo.woff2) format('woff2'),
+						url(https://s3-us-west-2.amazonaws.com/studio-mcgee-assets/typography/Futura-Boo.woff) format('woff'),
+						url(https://s3-us-west-2.amazonaws.com/studio-mcgee-assets/typography/Futura-Boo.ttf) format('truetype'),
+						url(https://s3-us-west-2.amazonaws.com/studio-mcgee-assets/typography/futura-webfont.svg#futurabook) format('svg'),
+						url(https://s3-us-west-2.amazonaws.com/studio-mcgee-assets/typography/Futura-Boo.eot?#iefix) format('embedded-opentype');
+				font-weight: 400;
+				font-style: normal;
+				}
+		body {
+				font-family: 'futurabook';
+				background-color: var(--white);
+		}
+		h1, h2, h3 {
+				color: var(--black);
+		}
+		p, li {
+				font-size: 2rem;
+		}
+		.text-lg {
+				font-size: 4rem;
+		}
+		.flex-center {
+				display: flex;
+				justify-content: center;
+		}
+		.col-center {
+				align-items: center;
+				flex-direction: column;
+		}
+		.box {
+				border: 1px solid black;
+				width: 300px;
+				height: 300px;
+		}
+		.box-cell {
+				height: 33.33%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				text-align: center;
+		}
+
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+	</style>
+</head>
+<body>
+  <textarea id="source">
+      class: center
+
+      <h1 style="margin-bottom:0; color:#da4d40;">ReasonML: </h1>
+      <h1 style="margin-top:0">Building Performant Crossplatform React Applications</h1>
+      
+      <section style="margin-top:50px">
+        <svg height="50px" viewBox="0 0 142 182" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+          <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="Group-2" transform="translate(1.000000, 1.000000)">
+                  <polygon id="Path" stroke="#DD4B39" fill="#DD4B39" points="0 179.000533 51.6787375 180 70 180 91.8750432 180 108.553396 180 140 179.000533 137.249707 37.7579527 84.3629144 37.7579527 84.3629144 3.04670223 6.6908181 0"></polygon>
+                  <g id="Group" transform="translate(59.399414, 130.959754)">
+                      <path d="M0,36.7493565 L0,5.68434189e-14 L18.1397067,5.68434189e-14 C26.6962233,1.10487488 31.1831831,5.30312874 31.6005861,12.5947616 C32.2266905,23.5322108 25.4090505,23.741229 25.4090505,24.5950706 C25.4090505,25.1642983 27.9272442,29.215727 32.9636316,36.7493565 L21.9539378,36.7493565 L16.4818158,26.5337493 L9.64945354,26.5337493 L9.64945354,36.7493565 L0,36.7493565 Z" id="Path-2" fill="#FFFFFF"></path>
+                      <path d="M9.63308746,7.77331529 L9.63308746,18.8211186 L14.9393907,18.8211186 L17.4069016,18.711814 C18.6553326,18.4225825 19.515693,18.1498397 19.9879826,17.8935855 C21.8520954,16.8821579 22.7017025,15.3500351 22.5368039,13.297217 C22.3976455,11.5648368 21.8807114,10.2032817 20.9860016,9.21255169 C20.60706,8.79294201 19.889267,8.38724858 18.8326226,7.99547142 L16.2058348,7.77331529 L9.63308746,7.77331529 Z" id="Path-3" fill="#DD4B39"></path>
+                      <polygon id="Path-5" stroke="#FFFFFF" fill="#FFFFFF" points="38.5132125 0.572903838 38.5132125 36.0289236 66.8240333 36.0289236 66.8240333 29.6810034 47.1078448 29.6810034 47.1078448 21.3432987 64.4028914 21.3432987 64.4028914 15.0152503 47.1078448 15.0152503 47.1078448 7.03985382 66.4025113 7.03985382 66.4025113 0.572903838"></polygon>
+                  </g>
+              </g>
+          </g>
+        </svg>
+        <span style="margin-top:10px; display:block;">UTAH REASONML DOJO</span>
+        <span style="margin-top:10px; display:block;">June 10, 2019</span>
+        <span style="margin-top:10px; display:block;">@benschinn</span>
+      </section>
+
+      ---
+      class: center
+      <h1 style="color:#3ce132">OCaml Ecosystem</h1>
+      <img src="http://reasonmlhub.com/exploring-reasonml/img/4a1823ac61589e61eae453cfe9421d70809f2fba.svg" alt="">
+      <p style="font-size: 15px; font-style:italic;">diagram credit to Dr. Axel Rauschmayer</p>
+
+
+      ---
+      class: center, middle
+
+      <h1 style="color:#da4d40;">Why Reason?</h1>
+
+      <div class="flex-center col-center">
+        <ul style="text-align:left;height: 50rem">
+          <li>C-like syntax</li>
+          <li>Powerful Type Inference</li>
+          <li>Immutable By Default</li>
+          <li>Compiles to Native</li>
+          <li>Performance ⚡</li>
+        </ul>
+      </div>
+      
+      ---
+      class: center, middle
+      <img width="50%" src="https://sms-documents.s3-us-west-2.amazonaws.com/diagram_state_of_xplatofrm.png" alt="">
+      ---
+      class: center, middle
+
+      <h1 style="color:#00c8ff;">Revery</h1>
+
+      <div class="flex-center col-center">
+        <ul style="height: 50rem; text-align: left;">
+          <li>Desktop Applications</li>
+          <li>Custom UI</li>
+          <li>React-like Concepts</li>
+          <li>OpenGL</li>
+        </ul>
+      </div>
+
+      ---
+
+      class: center
+
+      <h1 style="color:#00c8ff;">Benchmark</h1>
+
+      <table style="border-collapse: collapse;width:100%;">
+        <thead>
+          <th>
+            <td>electron-quick-start</td>
+            <td>revery-quick-start</td>
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Startup Time</td>
+            <td>~670 ms</td>
+            <td>~290 ms</td>
+          </tr>
+          <tr>
+            <td>Memory Usage</td>
+            <td>~51 MB</td>
+            <td>~26 MB</td>
+          </tr>
+          <tr>
+            <td>Bundle Size</td>
+            <td>~144 MB</td>
+            <td>~8 MB</td>
+          </tr>
+        </tbody>
+      </table>
+
+      ---
+
+      class: center, middle
+
+      <h1>Other Cool Projects</h1>
+
+      <div class="flex-center col-center">
+        <ul style="height: 50rem; text-align: left;">
+          <li>Brisk - Platform UI </li>
+          <li>Reprocessing - 2d graphics library</li>
+          <li>Fluid - Platform UI</li>
+        </ul>
+      </div>
+
+      ---
+
+      class: center, middle
+      <h1>Join Us! 🙌</h1>
+  
+      <p>
+        <a style="color:lightcoral" href="discord.gg/reasonml" target="_blank">discord.gg/reasonml</a>
+      </p>
+      <p>
+        <a style="color:lightcoral" href="reason.chat" target="_blank">reason.chat</a>
+      </p>
+      <p>
+        <a style="color:lightcoral" href="https://slack.utahjs.com/" target="_blank">UtahJS Slack → #reasonml</a>
+      </p>
+
+
+      ---
+      class: center, middle
+      <img src="https://user-images.githubusercontent.com/21044999/59083258-e9876980-88b3-11e9-88fe-398de4ee7191.gif" alt="">
+      
+  </textarea>
+
+
+	<script src="https://remarkjs.com/downloads/remark-latest.min.js">
+	</script>
+	<script>
+		var slideshow = remark.create();
+	</script>
+</body>
+</html>
